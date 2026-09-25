@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050608">
+  <meta name="description" content="Meet Chef Bot, the curious robotic chef exploring infinite worlds to inspire the automated food and beverage creations of The Chef Code.">
+  <title>The Chef Code — One Chef. Infinite Worlds.</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23080a0e'/%3E%3Cpath d='M18 25c-5-9 6-17 14-9 8-8 19 0 14 9 5 0 8 5 5 10-2 3-6 4-10 3v10H23V38c-4 1-8 0-10-3-3-5 0-10 5-10Z' fill='white'/%3E%3Cpath d='M24 48h16' stroke='%23ff6b22' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #07080a;
+      --paper: #f7f8fa;
+      --muted: #6e737c;
+      --line: rgba(12, 18, 28, .12);
+      --orange: #ff6b22;
+      --blue: #59b8ff;
+      --navy: #071a33;
+      --max: 1240px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    .skip { position: fixed; left: 1rem; top: -5rem; z-index: 100; background: white; padding: .8rem 1rem; border-radius: 999px; }
+    .skip:focus { top: 1rem; }
+    .nav {
+      position: fixed; inset: 0 0 auto; z-index: 50; height: 56px;
+      background: rgba(7, 8, 10, .72); color: white;
+      backdrop-filter: saturate(150%) blur(22px); -webkit-backdrop-filter: saturate(150%) blur(22px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner { max-width: var(--max); height: 100%; margin: auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { text-decoration: none; font-size: .94rem; font-weight: 700; letter-spacing: -.02em; }
+    .brand span { color: #aeb5c0; font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: .78rem; }
+    .nav-links a { text-decoration: none; color: #d7d9de; transition: color .2s; }
+    .nav-links a:hover { color: white; }
+    .nav-links .demo { padding: 8px 14px; border-radius: 999px; color: white; background: var(--orange); }
+    section { position: relative; }
+    .hero {
+      min-height: 100svh; padding: 120px 24px 44px; color: white; overflow: hidden;
+      background:
+        radial-gradient(circle at 72% 45%, rgba(57,149,255,.22), transparent 28%),
+        radial-gradient(circle at 50% 90%, rgba(255,107,34,.12), transparent 30%), #050608;
+    }
+    .hero::before { content: ""; position: absolute; width: 45vw; height: 45vw; min-width: 480px; min-height: 480px; right: 2vw; top: 16vh; border: 1px solid rgba(255,255,255,.09); border-radius: 50%; box-shadow: 0 0 100px rgba(89,184,255,.12), inset 0 0 100px rgba(89,184,255,.05); }
+    .hero-grid { max-width: var(--max); margin: auto; min-height: calc(100svh - 164px); display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 40px; }
+    .eyebrow { margin: 0 0 18px; text-transform: uppercase; letter-spacing: .18em; font-size: .75rem; font-weight: 700; color: #aab2bd; }
+    h1 { margin: 0; max-width: 780px; font-size: clamp(4rem, 7.4vw, 7.3rem); line-height: .91; letter-spacing: -.072em; font-weight: 700; }
+    .hero h1 em { display: block; color: transparent; font-style: normal; background: linear-gradient(90deg, #fff 0%, #74c5ff 45%, #ff8a4e 90%); -webkit-background-clip: text; background-clip: text; }
+    .hero-copy { margin: 28px 0 0; max-width: 590px; color: #aeb5c0; font-size: clamp(1.08rem, 1.6vw, 1.28rem); line-height: 1.55; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 650; text-decoration: none; transition: transform .25s, background .25s; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: white; color: var(--ink); }
+    .button.secondary { border: 1px solid rgba(255,255,255,.28); color: white; }
+    .arrow { margin-left: 8px; }
+    .hero-visual { position: relative; align-self: end; min-height: 72vh; display: grid; place-items: end center; }
+    .hero-visual img { position: relative; z-index: 2; width: min(100%, 680px); max-height: 78vh; object-fit: contain; object-position: bottom; filter: drop-shadow(0 40px 70px rgba(0,0,0,.65)); animation: arrive 1.2s cubic-bezier(.2,.8,.2,1) both; }
+    .hero-visual::after { content: ""; position: absolute; z-index: 1; bottom: 2%; width: 75%; height: 10%; border-radius: 50%; background: rgba(86,174,255,.28); filter: blur(36px); }
+    .scroll-note { position: absolute; left: 50%; bottom: 22px; translate: -50% 0; color: #858c96; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; }
+    .intro { min-height: 100svh; display: grid; place-items: center; padding: 140px 24px; background: #fff; }
+    .intro-inner { width: min(100%, 1050px); text-align: center; }
+    .kicker { color: var(--orange); font-size: .86rem; text-transform: uppercase; letter-spacing: .18em; font-weight: 750; }
+    h2 { margin: 18px 0 0; font-size: clamp(3rem, 7vw, 6.5rem); line-height: .98; letter-spacing: -.062em; }
+    .intro p { margin: 34px auto 0; max-width: 800px; color: #60656d; font-size: clamp(1.25rem, 2.4vw, 2rem); line-height: 1.4; letter-spacing: -.02em; }
+    .cycle { margin: 70px auto 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .cycle span { padding: 13px 18px; border: 1px solid var(--line); border-radius: 999px; background: #fafbfc; font-weight: 650; }
+    .cycle i { color: var(--orange); font-style: normal; }
+    .spotlight { min-height: 100svh; background: #090a0c; color: white; display: grid; grid-template-columns: 1fr 1fr; }
+    .spotlight-media { min-height: 740px; overflow: hidden; }
+    .spotlight-media img { width: 100%; height: 100%; object-fit: cover; }
+    .spotlight-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(60px, 8vw, 140px); }
+    .spotlight-copy h2 { font-size: clamp(3rem, 6vw, 6rem); }
+    .spotlight-copy p { margin: 28px 0 0; max-width: 610px; color: #aaaeb5; font-size: 1.2rem; line-height: 1.65; }
+    .device { margin-top: 46px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.16); color: #e9ebee; }
+    .device small { display: block; margin-bottom: 10px; color: #777f89; text-transform: uppercase; letter-spacing: .16em; }
+    .worlds { padding: 150px 24px; background: #eef3f8; overflow: hidden; }
+    .section-head { max-width: var(--max); margin: auto; display: grid; grid-template-columns: 1fr .72fr; gap: 80px; align-items: end; }
+    .section-head h2 { max-width: 800px; }
+    .section-head p { margin: 0 0 8px; color: #616872; font-size: 1.15rem; line-height: 1.65; }
+    .world-grid { max-width: var(--max); margin: 76px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .world { min-height: 370px; padding: 36px; border-radius: 32px; position: relative; overflow: hidden; color: white; display: flex; flex-direction: column; justify-content: flex-end; box-shadow: 0 24px 60px rgba(11,25,45,.12); }
+    .world::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 76% 20%, rgba(255,255,255,.24), transparent 25%); }
+    .world:nth-child(1) { background: linear-gradient(145deg, #071a33, #126fb3); }
+    .world:nth-child(2) { background: linear-gradient(145deg, #451b60, #e66ea2); }
+    .world:nth-child(3) { background: linear-gradient(145deg, #6a2b0d, #f28a34); }
+    .world:nth-child(4) { background: linear-gradient(145deg, #07342d, #35a67c); }
+    .world-index { position: absolute; top: 28px; right: 32px; font-size: 4.5rem; line-height: 1; letter-spacing: -.08em; color: rgba(255,255,255,.16); font-weight: 750; }
+    .world h3 { position: relative; margin: 0; font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -.045em; }
+    .world p { position: relative; margin: 14px 0 0; max-width: 500px; color: rgba(255,255,255,.78); font-size: 1rem; line-height: 1.55; }
+    .creation { padding: 150px 24px; background: white; }
+    .creation-card { max-width: var(--max); margin: auto; overflow: hidden; border-radius: 38px; background: #dce8fa; box-shadow: 0 30px 90px rgba(10,31,63,.14); }
+    .creation-card img { width: 100%; aspect-ratio: 16/8.2; object-fit: cover; object-position: center; }
+    .creation-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: clamp(34px, 6vw, 74px); background: #071a33; color: white; }
+    .creation-copy h2 { font-size: clamp(2.8rem, 5vw, 5rem); }
+    .creation-copy p { margin: 8px 0 0; align-self: end; color: #aebed1; font-size: 1.12rem; line-height: 1.65; }
+    .character { padding: 140px 24px; background: #f7f8fa; }
+    .character-inner { max-width: var(--max); margin: auto; }
+    .character-top { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 60px; }
+    .character-top p { max-width: 460px; color: #656a72; font-size: 1.1rem; line-height: 1.6; }
+    .sheet { padding: 16px; background: white; border: 1px solid var(--line); border-radius: 32px; overflow: hidden; box-shadow: 0 22px 60px rgba(11,17,25,.08); }
+    .sheet img { width: 100%; border-radius: 20px; }
+    .traits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+    .trait { padding: 30px; background: white; border: 1px solid var(--line); border-radius: 24px; }
+    .trait strong { display: block; font-size: 1.25rem; margin-bottom: 8px; }
+    .trait span { color: #686d75; line-height: 1.5; }
+    .closing { min-height: 90svh; padding: 140px 24px 80px; display: grid; place-items: center; text-align: center; background: radial-gradient(circle at 50% 42%, #15365b 0%, #071629 38%, #030507 78%); color: white; }
+    .closing-inner { max-width: 1050px; }
+    .closing h2 { font-size: clamp(3.8rem, 8.6vw, 8rem); }
+    .closing p { margin: 30px auto 0; max-width: 680px; color: #9eabb9; font-size: 1.2rem; line-height: 1.6; }
+    .closing .button { margin-top: 36px; background: var(--orange); color: white; }
+    footer { margin-top: 100px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); display: flex; justify-content: space-between; gap: 30px; color: #76818d; font-size: .82rem; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    @keyframes arrive { from { opacity: 0; transform: translateY(30px) scale(.97); } }
+    @media (max-width: 860px) {
+      .nav-links a:not(.demo) { display: none; }
+      .hero { padding-top: 105px; }
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero h1, .hero-copy { margin-left: auto; margin-right: auto; }
+      .actions { justify-content: center; }
+      .hero-visual { min-height: 48vh; }
+      .hero-visual img { max-height: 52vh; }
+      .scroll-note { display: none; }
+      .spotlight { grid-template-columns: 1fr; }
+      .spotlight-media { min-height: auto; aspect-ratio: 4/5; }
+      .spotlight-copy { padding: 72px 24px 90px; }
+      .section-head, .creation-copy { grid-template-columns: 1fr; gap: 26px; }
+      .world-grid { grid-template-columns: 1fr; }
+      .world { min-height: 330px; }
+      .character-top { align-items: start; flex-direction: column; }
+      .traits { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: center; }
+    }
+    @media (max-width: 520px) {
+      h1 { font-size: clamp(3.35rem, 18vw, 5rem); }
+      .button { width: 100%; }
+      .hero-visual { min-height: 42vh; }
+      .cycle { gap: 8px; }
+      .cycle span { padding: 10px 13px; font-size: .84rem; }
+      .cycle i { display: none; }
+      .world { padding: 28px; border-radius: 26px; }
+      .creation, .character, .worlds { padding-left: 16px; padding-right: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav" aria-label="Primary navigation">
+    <nav class="nav-inner">
+      <a class="brand" href="#top">The Chef Code <span>/ Chef Bot</span></a>
+      <div class="nav-links">
+        <a href="#story">Story</a><a href="#universes">Universes</a><a href="#creations">Creations</a>
+        <a class="demo" href="mailto:popapopzfoods@gmail.com?subject=Book%20a%20Chef%20Bot%20demo">Book a demo</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">The Chef Code Universe</p>
+          <h1>One Chef. <em>Infinite Worlds.</em></h1>
+          <p class="hero-copy">Meet Chef Bot — a curious robotic chef who travels beyond the known kitchen to discover new flavours, ideas and ways to create.</p>
+          <div class="actions">
+            <a class="button primary" href="#story">Explore the universe <span class="arrow">↓</span></a>
+            <a class="button secondary" href="mailto:popapopzfoods@gmail.com?subject=Book%20a%20Chef%20Bot%20demo">Book a demo</a>
+          </div>
+        </div>
+        <div class="hero-visual"><img src="assets/chefbot.png" alt="Chef Bot, a friendly white robotic chef" width="1254" height="1254"></div>
+      </div>
+      <div class="scroll-note" aria-hidden="true">Scroll to discover</div>
+    </section>
+
+    <section class="intro" id="story">
+      <div class="intro-inner reveal">
+        <span class="kicker">The story begins</span>
+        <h2>Curiosity is his compass.</h2>
+        <p>Chef Bot discovers a remarkable navigation device — a key to culinary universes, each with its own landscapes, cultures, ingredients and technologies.</p>
+        <div class="cycle" aria-label="Chef Bot's creative cycle">
+          <span>Explore</span><i>→</i><span>Discover</span><i>→</i><span>Create</span><i>→</i><span>Automate</span><i>→</i><span>Share</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="spotlight" aria-label="Meet Chef Bot">
+      <div class="spotlight-media"><img src="assets/chefbot-spotlight.png" alt="Chef Bot standing beneath a dramatic spotlight" width="1122" height="1402" loading="lazy"></div>
+      <div class="spotlight-copy reveal">
+        <span class="kicker">Meet the explorer</span>
+        <h2>Small bot.<br>Big appetite<br>for possibility.</h2>
+        <p>Friendly, inventive and just adventurous enough, Chef Bot learns from every civilization he meets. Sometimes he brings home a flavour. Sometimes a method. Sometimes an idea no kitchen has tried before.</p>
+        <div class="device"><small>His constant companion</small>The Navigator — a mysterious device that opens a route to the next world.</div>
+      </div>
+    </section>
+
+    <section class="worlds" id="universes">
+      <div class="section-head reveal">
+        <div><span class="kicker">Infinite worlds</span><h2>Every creation starts somewhere unexpected.</h2></div>
+        <p>Each universe is a new adventure with its own visual language, characters and culinary logic. What Chef Bot learns there becomes a real-world possibility.</p>
+      </div>
+      <div class="world-grid">
+        <article class="world reveal"><span class="world-index">01</span><h3>The Fizz Nebula</h3><p>A sky-city powered by flavour currents teaches Chef Bot how a perfect sparkling drink can be composed in seconds.</p></article>
+        <article class="world reveal"><span class="world-index">02</span><h3>Pearl Planet</h3><p>In a world of floating flavour orbs, Chef Bot learns the delicate rhythm behind popping-boba creation.</p></article>
+        <article class="world reveal"><span class="world-index">03</span><h3>The Velvet Range</h3><p>Cloud farmers reveal how texture, temperature and motion transform simple ingredients into thick shakes.</p></article>
+        <article class="world reveal"><span class="world-index">04</span><h3>Forge 24</h3><p>An energetic civilization shows Chef Bot how precision and nutrition can become one seamless protein-shake ritual.</p></article>
+      </div>
+    </section>
+
+    <section class="creation" id="creations">
+      <div class="creation-card reveal">
+        <img src="assets/chefbot-machine.png" alt="A Chef Bot automated soda dispensing machine" width="1672" height="941" loading="lazy">
+        <div class="creation-copy">
+          <div><span class="kicker">From story to system</span><h2>Discovery, made real.</h2></div>
+          <p>The Chef Code turns imagination into automated food and beverage experiences — from flavoured soda and popping boba to thick shakes, protein shakes and ideas still waiting in another universe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="character">
+      <div class="character-inner">
+        <div class="character-top reveal">
+          <div><span class="kicker">Always recognizable</span><h2>One Chef.<br>Any world.</h2></div>
+          <p>Art styles and landscapes may change, but Chef Bot remains the heart of every story: expressive, kind, curious and ready to invent.</p>
+        </div>
+        <div class="sheet reveal"><img src="assets/chefbot-angles.png" alt="Chef Bot character turnaround, expressions and poses" width="1536" height="1024" loading="lazy"></div>
+        <div class="traits">
+          <div class="trait reveal"><strong>Curious</strong><span>He asks why, then travels far enough to find out.</span></div>
+          <div class="trait reveal"><strong>Inventive</strong><span>Every discovery becomes a new way to cook, mix or serve.</span></div>
+          <div class="trait reveal"><strong>Generous</strong><span>The adventure is complete only when the creation is shared.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-inner reveal">
+        <span class="kicker">The next universe is opening</span>
+        <h2>Endless creations.</h2>
+        <p>The Chef Code is building a story-driven future where food, imagination and automation meet — one Chef Bot adventure at a time.</p>
+        <a class="button" href="mailto:popapopzfoods@gmail.com?subject=Book%20a%20Chef%20Bot%20demo&body=Hello%20The%20Chef%20Code%20team%2C%0A%0AI%27d%20like%20to%20book%20a%20demo.">Book a demo <span class="arrow">↗</span></a>
+        <footer><span>© 2026 The Chef Code</span><span>Cook · Create · Explore</span></footer>
+      </div>
+    </section>
+  </main>
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      }), { threshold: 0.14 });
+      reveals.forEach((element) => observer.observe(element));
+    } else { reveals.forEach((element) => element.classList.add('visible')); }
+  </script>
+</body>
+</html>

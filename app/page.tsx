@@ -1,6 +1,5 @@
 import { CharacterTraits } from "@/components/CharacterTraits";
 import { ClosingCTA } from "@/components/ClosingCTA";
-import { CreationShowcase } from "@/components/CreationShowcase";
 import { Hero } from "@/components/Hero";
 import { Navigation } from "@/components/Navigation";
 import { Story } from "@/components/Story";
@@ -17,7 +16,6 @@ export default function HomePage() {
         <Hero />
         <Story />
         <UniverseGrid />
-        <CreationShowcase />
         <CharacterTraits />
         <ClosingCTA />
       </main>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import Image from "next/image";
 import { DEMO_HREF } from "@/data/content";
 
@@ -29,17 +29,26 @@ export function Navigation() {
     return () => observer.disconnect();
   }, []);
 
+  const handleLink = (id: string, event: MouseEvent<HTMLAnchorElement>) => {
+    setOpen(false);
+    if (id !== "creations") return;
+    event.preventDefault();
+    window.history.replaceState(null, "", "#creations");
+    window.dispatchEvent(new Event("chefbot:show-fizz"));
+    window.setTimeout(() => document.getElementById("creations")?.scrollIntoView({ behavior: "smooth", block: "center" }), 0);
+  };
+
   return (
     <header className="nav" aria-label="Primary navigation">
       <nav className="navInner">
         <a className="brand" href="#top" onClick={() => setOpen(false)}>
-          <Image className="brandMark" src="/brand/chefbot-mascot-mark.svg" alt="" width={30} height={30} priority />
+          <Image className="brandMark" src="/brand/chefbot-head-3d.png" alt="" width={1200} height={1096} priority />
           <span className="brandName">The Chef Code</span>
           <span className="brandCharacter">/ Chef Bot</span>
         </a>
         <div className={`navLinks ${open ? "isOpen" : ""}`} id="primary-links">
           {links.map((link) => (
-            <a href={link.href} key={link.id} aria-current={active === link.id ? "location" : undefined} onClick={() => setOpen(false)}>
+            <a href={link.href} key={link.id} aria-current={active === link.id ? "location" : undefined} onClick={(event) => handleLink(link.id, event)}>
               {link.label}
             </a>
           ))}

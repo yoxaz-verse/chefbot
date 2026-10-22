@@ -11,7 +11,7 @@
 }
 .navInner { padding: 0 14px 0 18px; }
 .brand { display: flex; align-items: center; gap: 8px; }
-.brandMark { width: 30px; height: 30px; display: block; border-radius: 9px; background: white; object-fit: contain; padding: 2px; }
+.brandMark { width: 34px; height: 34px; display: block; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(89,184,255,.22)); }
 .brandName { color: white !important; }
 .brandCharacter { color: #8c929c !important; }
 .navLinks { position: absolute; left: 50%; translate: -50% 0; height: 100%; }
@@ -102,11 +102,13 @@
 .universe-velvet { --u1:#6a2b0d; --u2:#f28a34; }
 .universe-forge { --u1:#07342d; --u2:#35a67c; }
 .universeTabs { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
-.universeTabs button { min-height: 76px; padding: 0 20px; display: flex; align-items: center; gap: 14px; color: #8995a3; border: 1px solid rgba(255,255,255,.1); border-radius: 18px 18px 0 0; background: rgba(255,255,255,.035); font: inherit; text-align: left; cursor: pointer; transition: color .25s ease, background .25s ease, transform .25s ease; }
+.universeTabs button { min-height: 82px; padding: 0 20px; display: flex; align-items: center; gap: 14px; color: #8995a3; border: 1px solid rgba(255,255,255,.1); border-radius: 18px 18px 0 0; background: rgba(255,255,255,.035); font: inherit; text-align: left; cursor: pointer; transition: color .25s ease, background .25s ease, transform .25s ease; }
 .universeTabs button:hover { color: white; background: rgba(255,255,255,.07); }
 .universeTabs button[aria-selected="true"] { color: white; border-color: rgba(255,255,255,.18); background: linear-gradient(135deg,var(--u1),var(--u2)); transform: translateY(-4px); }
 .universeTabs button span { font-size: .66rem; opacity: .7; }
 .universeTabs button strong { font: 650 .9rem var(--font-sora),sans-serif; }
+.universeTabCopy { display: grid; gap: 5px; }
+.universeTabCopy small { color: currentColor; font-size: .59rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; opacity: .58; }
 .universeStage { min-height: 570px; display: grid; grid-template-columns: 1.05fr .95fr; overflow: hidden; border: 1px solid rgba(255,255,255,.11); border-radius: 0 0 36px 36px; background: linear-gradient(135deg,var(--u1),var(--u2)); box-shadow: 0 34px 90px rgba(0,0,0,.28); }
 .universeArt { min-height: 570px; position: relative; isolation: isolate; overflow: hidden; }
 .universeArt::before { content: ""; position: absolute; width: 420px; height: 420px; left: 50%; top: 50%; translate: -50% -50%; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; box-shadow: 0 0 80px rgba(255,255,255,.1), inset 0 0 80px rgba(255,255,255,.06); }
@@ -124,6 +126,25 @@
 .universeOutcome p { margin: 9px 0 0; max-width: 500px; line-height: 1.55; }
 .universeProduct { margin-top: 28px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .universeProduct strong { padding: 9px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; font-size: .82rem; }
+.fizzDiscoveryVisual { min-height: 570px; position: relative; isolation: isolate; overflow: hidden; scroll-margin-top: 90px; }
+.fizzDiscoveryVisual::before { content:""; position:absolute; width:480px; height:480px; left:47%; top:50%; translate:-50% -50%; border:1px solid rgba(255,255,255,.16); border-radius:50%; box-shadow:0 0 90px rgba(89,184,255,.13), inset 0 0 90px rgba(89,184,255,.05); }
+.fizzDiscoveryVisual::after { content:""; position:absolute; z-index:-1; width:300px; height:300px; left:48%; bottom:-150px; translate:-50% 0; border-radius:50%; background:rgba(2,12,25,.45); filter:blur(35px); }
+.fizzMachine { position:absolute; z-index:2; width:min(78%,520px); height:auto; left:45%; bottom:-4%; translate:-50% 0; filter:drop-shadow(0 30px 30px rgba(0,0,0,.32)); }
+.fizzBot { position:absolute; z-index:3; width:min(24%,158px); height:auto; right:4%; bottom:5%; filter:drop-shadow(0 20px 22px rgba(0,0,0,.3)); animation:bot-float 5s ease-in-out infinite; }
+.fizzOrbit { position:absolute; inset:0; pointer-events:none; }
+.fizzOrbit i { position:absolute; border-radius:50%; background:rgba(255,255,255,.7); box-shadow:0 0 18px rgba(255,255,255,.5); }
+.fizzOrbit i:nth-child(1) { width:14px; height:14px; left:12%; top:24%; }
+.fizzOrbit i:nth-child(2) { width:7px; height:7px; right:12%; top:31%; }
+.fizzOrbit i:nth-child(3) { width:22px; height:22px; left:18%; bottom:18%; opacity:.34; }
+.discoveryBadge { position:absolute; z-index:4; left:24px; top:24px; padding:9px 13px; color:white; border:1px solid rgba(255,255,255,.2); border-radius:999px; background:rgba(4,17,34,.38); backdrop-filter:blur(12px); font-size:.62rem; font-weight:750; letter-spacing:.11em; text-transform:uppercase; }
+.universeStageTeaser { position:relative; }
+.universeStageTeaser::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(110deg,rgba(7,8,10,.24),transparent 55%); }
+.teaserArt::after { filter:blur(1px) drop-shadow(0 24px 30px rgba(0,0,0,.26)); opacity:.45; }
+.teaserArt > span { opacity:.48; }
+.teaserDetail { position:relative; z-index:2; }
+.teaserStatus { display:inline-flex; margin-top:18px; padding:8px 12px; color:white; border:1px solid rgba(255,255,255,.24); border-radius:999px; font-size:.65rem; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+.teaserDetail h3 { opacity:.88; }
+.teaserNote { max-width:470px; margin:28px 0 0; padding-top:22px; color:rgba(255,255,255,.52); border-top:1px solid rgba(255,255,255,.15); font-size:.9rem; line-height:1.6; }
 
 .creation { padding: clamp(110px,12vw,170px) 24px; background: white; }
 .creationShell { max-width: var(--max); margin: auto; }
@@ -171,6 +192,7 @@
 @keyframes hero-float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
 @keyframes orbit-pulse { 0%,100% { transform:scale(1); opacity:.65; } 50% { transform:scale(1.035); opacity:1; } }
 @keyframes universe-form { 0%,100% { transform:rotate(-4deg) scale(1); border-radius:43% 57% 61% 39%; } 50% { transform:rotate(7deg) scale(1.07); border-radius:57% 43% 36% 64%; } }
+@keyframes bot-float { 0%,100% { transform:translateY(0) rotate(-1deg); } 50% { transform:translateY(-10px) rotate(1deg); } }
 
 @media (max-width: 980px) {
   .navLinks { gap: 18px; }
@@ -181,6 +203,8 @@
   .universeTabs button { padding-inline: 14px; }
   .universeTabs button strong { font-size: .8rem; }
   .universeStage { grid-template-columns: .9fr 1.1fr; }
+  .fizzMachine { width:min(84%,500px); }
+  .fizzBot { right:1%; }
 }
 
 @media (max-width: 860px) {
@@ -226,6 +250,12 @@
   .universeArt::before { width: 290px; height: 290px; }
   .universeArt::after { width: 150px; height: 150px; }
   .universeDetail { padding: 34px 26px 40px; }
+  .universeStageDiscovered { display:flex; flex-direction:column; }
+  .universeStageDiscovered .universeDetail { order:1; }
+  .fizzDiscoveryVisual { order:2; min-height:460px; }
+  .fizzDiscoveryVisual::before { width:340px; height:340px; }
+  .fizzMachine { width:min(78%,440px); left:46%; }
+  .fizzBot { width:min(22%,125px); right:5%; }
   .creationCopy { grid-template-columns: 1fr; gap: 24px; }
   .creationCard { margin-top: 52px; }
   .productRail { grid-template-columns: 1fr 1fr; }
@@ -244,6 +274,11 @@
   .journeyStep, .journeyStep:not(:first-child), .journeyStep:last-child { grid-template-columns: 38px 92px 1fr; }
   .universeTabs { grid-template-columns: 1fr; }
   .universeTabs button { width: 100%; }
+  .fizzDiscoveryVisual { min-height:370px; }
+  .fizzDiscoveryVisual::before { width:270px; height:270px; }
+  .fizzMachine { width:min(82%,350px); bottom:-2%; }
+  .fizzBot { width:min(25%,104px); right:1%; bottom:4%; }
+  .discoveryBadge { left:16px; top:16px; }
   .universeProduct { align-items: flex-start; flex-direction: column; }
   .machineMeta { inset: 14px; }
   .machineMeta span:last-child { display: none; }
@@ -256,6 +291,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .heroVisual img, .heroOrbit, .universeArt::after, .closingOrbit span { animation: none !important; }
+  .heroVisual img, .heroOrbit, .universeArt::after, .fizzBot, .closingOrbit span { animation: none !important; }
   .machineFrame:hover img { transform: none; }
 }

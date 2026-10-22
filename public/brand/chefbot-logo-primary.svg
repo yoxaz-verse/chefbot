@@ -1,17 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 320" role="img" aria-labelledby="title desc">
   <title id="title">The Chef Code with Chef Bot mascot</title>
   <desc id="desc">Chef Bot's robot head beside The Chef Code wordmark and One Chef, Infinite Worlds tagline.</desc>
-  <g transform="translate(14 8) scale(.59)">
-    <path fill="#F7F8FA" stroke="#D5DCE6" stroke-width="7" d="M132 190c-31-10-52-37-52-70 0-42 34-76 76-76 18 0 34 6 47 16C216 25 248 4 284 4c44 0 81 31 90 72 9-4 19-6 30-6 40 0 72 32 72 72 0 28-16 53-40 65l-304-17Z"/>
-    <path fill="#FFF" stroke="#D5DCE6" stroke-width="7" d="M126 169h260c17 0 30 13 30 30v29H96v-29c0-17 13-30 30-30Z"/>
-    <rect x="68" y="210" width="376" height="250" rx="104" fill="#F7F8FA" stroke="#D5DCE6" stroke-width="8"/>
-    <rect x="105" y="249" width="302" height="166" rx="78" fill="#071A33"/>
-    <ellipse cx="191" cy="333" rx="54" ry="65" fill="#07080A" stroke="#FFF" stroke-width="8"/>
-    <ellipse cx="321" cy="333" rx="54" ry="65" fill="#07080A" stroke="#FFF" stroke-width="8"/>
-    <ellipse cx="207" cy="311" rx="15" ry="20" fill="#FFF"/>
-    <ellipse cx="337" cy="311" rx="15" ry="20" fill="#FFF"/>
-    <path d="M214 407c23 15 61 15 84 0" fill="none" stroke="#59B8FF" stroke-width="9" stroke-linecap="round"/>
-    <path d="M386 179c18 1 35 8 48 20" fill="none" stroke="#FF6B22" stroke-width="12" stroke-linecap="round"/>
+  <g transform="translate(18 5) scale(.6)">
+    <path d="M104 205C69 190 49 160 55 127c7-40 45-66 85-58 15 3 29 10 39 21 13-42 52-71 97-67 43 4 78 36 85 77 13-12 31-18 50-15 39 6 65 43 58 82-4 25-20 45-42 56l-323-18Z" fill="#f7f8fa" stroke="#d3dbe6" stroke-width="7"/>
+    <path d="M121 190h270c18 0 32 14 32 32v37H89v-37c0-18 14-32 32-32Z" fill="#fff" stroke="#d3dbe6" stroke-width="7"/>
+    <rect x="80" y="240" width="352" height="234" rx="92" fill="#f7f8fa" stroke="#d3dbe6" stroke-width="8"/>
+    <ellipse cx="181" cy="353" rx="64" ry="78" fill="#050608" stroke="#fff" stroke-width="9"/>
+    <ellipse cx="331" cy="353" rx="64" ry="78" fill="#050608" stroke="#fff" stroke-width="9"/>
+    <ellipse cx="202" cy="324" rx="18" ry="23" fill="#fff"/><ellipse cx="352" cy="324" rx="18" ry="23" fill="#fff"/>
+    <circle cx="211" cy="354" r="7" fill="#fff"/><circle cx="361" cy="354" r="7" fill="#fff"/>
+    <path d="M230 438c15 13 37 13 52 0" fill="none" stroke="#172235" stroke-width="9" stroke-linecap="round"/>
   </g>
   <g fill="#071A33" font-family="Sora, Arial, sans-serif">
     <text x="350" y="148" font-size="79" font-weight="750" letter-spacing="-4">The Chef Code</text>

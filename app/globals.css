@@ -642,7 +642,7 @@ footer {
 .brandHeroCopy > p:not(.brandLabel) { max-width: 640px; margin: 30px 0 0; color: #aeb5c0; font-size: clamp(1rem, 1.5vw, 1.24rem); line-height: 1.65; }
 .brandDownload { margin-top: 32px; color: var(--ink); background: white; }
 .brandHeroBot { align-self: end; display: grid; place-items: end center; }
-.brandHeroBot img { width: min(100%, 610px); max-height: 78vh; object-fit: contain; object-position: bottom; filter: drop-shadow(0 40px 70px rgba(0,0,0,.7)); }
+.brandHeroBot img { width: min(100%, 610px); max-height: 72vh; object-fit: contain; object-position: bottom; filter: drop-shadow(0 40px 70px rgba(0,0,0,.7)); }
 
 .brandSection { padding: clamp(88px, 11vw, 150px) max(24px, calc((100vw - var(--max)) / 2)); }
 .brandSectionIntro { max-width: 850px; }

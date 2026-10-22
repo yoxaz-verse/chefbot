@@ -1,12 +1,21 @@
-export type Universe = Readonly<{
+type UniverseBase = Readonly<{
   index: string;
   name: string;
   label: string;
-  product: string;
-  outcome: string;
-  description: string;
   tone: "fizz" | "pearl" | "velvet" | "forge";
 }>;
+
+export type Universe =
+  | (UniverseBase & Readonly<{
+      status: "discovered";
+      product: string;
+      outcome: string;
+      description: string;
+    }>)
+  | (UniverseBase & Readonly<{
+      status: "undiscovered";
+      teaser: string;
+    }>);
 
 export type Trait = Readonly<{
   name: string;
@@ -26,6 +35,7 @@ export const universes: readonly Universe[] = [
     index: "01",
     name: "The Fizz Nebula",
     label: "Atmospheric flavour currents",
+    status: "discovered",
     product: "Flavoured soda systems",
     outcome: "A sparkling recipe composed with speed, balance and a little stardust.",
     description:
@@ -36,30 +46,24 @@ export const universes: readonly Universe[] = [
     index: "02",
     name: "Pearl Planet",
     label: "Orbiting flavour pearls",
-    product: "Popping-boba systems",
-    outcome: "A delicate rhythm for creating, carrying and serving bright flavour orbs.",
-    description:
-      "In a world of floating flavour orbs, Chef Bot learns the delicate rhythm behind popping-boba creation.",
+    status: "undiscovered",
+    teaser: "A distant world of luminous orbs is moving into the Navigator’s range.",
     tone: "pearl",
   },
   {
     index: "03",
     name: "The Velvet Range",
     label: "Cloud-built texture",
-    product: "Thick-shake systems",
-    outcome: "A lesson in how temperature and motion turn simple ingredients into velvet.",
-    description:
-      "Cloud farmers reveal how texture, temperature and motion transform simple ingredients into thick shakes.",
+    status: "undiscovered",
+    teaser: "Soft signals drift from beyond the clouds, but their source remains unknown.",
     tone: "velvet",
   },
   {
     index: "04",
     name: "Forge 24",
     label: "Precision-powered nutrition",
-    product: "Protein-shake systems",
-    outcome: "A seamless ritual where accuracy, energy and nourishment move as one.",
-    description:
-      "An energetic civilization shows Chef Bot how precision and nutrition can become one seamless protein-shake ritual.",
+    status: "undiscovered",
+    teaser: "A rhythmic energy pulse has been detected. The route is not yet stable.",
     tone: "forge",
   },
 ] as const;

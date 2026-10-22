@@ -50,10 +50,10 @@ export default function BrandPage() {
         </div>
         <div className="brandHeroBot">
           <Image
-            src="/images/chefbot.png"
-            alt="Chef Bot, the central character of The Chef Code"
-            width={1254}
-            height={1254}
+            src="/brand/chefbot-head-3d.png"
+            alt="Chef Bot's rounded white robot head and sculpted chef hat"
+            width={1200}
+            height={1096}
             priority
             sizes="(max-width: 880px) 90vw, 44vw"
           />

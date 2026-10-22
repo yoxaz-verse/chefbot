@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import "./globals.css";
+import "./landing.css";
 
 const inter = localFont({
   src: "./fonts/Inter-Variable.ttf",

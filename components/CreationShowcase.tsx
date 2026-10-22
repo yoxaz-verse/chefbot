@@ -4,15 +4,8 @@ import { Reveal } from "@/components/Reveal";
 export function CreationShowcase() {
   return (
     <section className="creation" id="creations">
-      <Reveal className="creationCard">
-        <Image
-          src="/images/chefbot-machine.png"
-          alt="A Chef Bot automated soda dispensing machine"
-          width={1672}
-          height={941}
-          sizes="(max-width: 1280px) 100vw, 1240px"
-        />
-        <div className="creationCopy">
+      <div className="creationShell">
+        <Reveal className="creationCopy">
           <div>
             <span className="kicker">From story to system</span>
             <h2>Discovery, made real.</h2>
@@ -22,8 +15,30 @@ export function CreationShowcase() {
             experiences — from flavoured soda and popping boba to thick shakes,
             protein shakes and ideas still waiting in another universe.
           </p>
-        </div>
-      </Reveal>
+        </Reveal>
+        <Reveal className="creationCard">
+          <div className="machineFrame">
+            <div className="machineMeta"><span>Chef Code / Creation 01</span><span>Automated beverage system</span></div>
+            <Image
+              src="/images/chefbot-machine.png"
+              alt="A Chef Bot automated soda dispensing machine"
+              width={1672}
+              height={941}
+              sizes="(max-width: 1280px) 100vw, 1240px"
+            />
+          </div>
+          <div className="productRail" aria-label="Chef Code product families">
+            {[
+              ["01", "Flavoured soda", "Fizz Nebula"],
+              ["02", "Popping boba", "Pearl Planet"],
+              ["03", "Thick shakes", "Velvet Range"],
+              ["04", "Protein shakes", "Forge 24"],
+            ].map(([index, product, world]) => (
+              <article key={product}><span>{index}</span><strong>{product}</strong><small>Inspired by {world}</small></article>
+            ))}
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }

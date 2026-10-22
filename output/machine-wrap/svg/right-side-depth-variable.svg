@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 3000" data-panel="right-side-depth-variable" data-status="PROVISIONAL - VERIFY ON MACHINE BEFORE PRINTING">
+  <title>The Chef Code Machine Wrap - Measured Proof - right-side-depth-variable</title>
+  <desc>Editable measured-proof artwork. Verify all dimensions and cutouts on the physical machine before printing.</desc>
+  <g id="background"><rect width="1200" height="3000" fill="#FFFFFF"/></g>
+  <g id="brand-architecture">
+      <path d="M 0 2280 C 240 2010, 504 2550, 756 2280 S 1056 1980, 1200 2160 L 1200 3000 L 0 3000 Z" fill="#071A33"/>
+      <path d="M 0 2160 C 240 1860, 504 2370, 756 2100 S 1056 1800, 1200 1980" fill="none" stroke="#59B8FF" stroke-width="14"/>
+      <path d="M 0 2010 C 240 1710, 504 2220, 756 1950 S 1056 1650, 1200 1830" fill="none" stroke="#DCEEFF" stroke-width="28"/>
+      <path d="M 0 1830 C 240 1530, 504 2040, 756 1770 S 1056 1470, 1200 1650" fill="none" stroke="#FF6B22" stroke-width="8"/>
+    <circle cx="120" cy="360" r="42" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="216" cy="600" r="22" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="1020" cy="420" r="29" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="936" cy="2070" r="18" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/></g>
+  <g id="character"><image href="../../../public/images/chefbot.png" x="660" y="960" width="504" height="1350" preserveAspectRatio="xMidYMid meet" opacity=".96"/></g>
+  <g id="typography">
+      <text x="600" y="600" text-anchor="middle" fill="#071A33" font-family="Sora, Arial, sans-serif" font-size="102" font-weight="700">The Chef Code</text>
+      <path d="M 576 675 Q 600 705 624 675" fill="none" stroke="#FF6B22" stroke-width="10" stroke-linecap="round"/>
+      <text x="600" y="735" text-anchor="middle" fill="#071A33" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="600" letter-spacing="2">One Chef. Infinite Worlds. Endless Creations.</text>
+    </g>
+  <g id="safe-area" data-print="false" style="display:none"><rect x="42" y="42" width="1116" height="2916" fill="none" stroke="#FF6B22" stroke-width="10" stroke-dasharray="30 20"/></g>
+  
+  <g id="bleed" data-print="false" style="display:none"><rect x="2" y="2" width="1196" height="2996" fill="none" stroke="#59B8FF" stroke-width="4"/></g>
+</svg>

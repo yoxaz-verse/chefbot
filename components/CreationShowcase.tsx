@@ -20,10 +20,10 @@ export function CreationShowcase() {
           <div className="machineFrame">
             <div className="machineMeta"><span>Chef Code / Creation 01</span><span>Automated beverage system</span></div>
             <Image
-              src="/images/chefbot-machine.png"
-              alt="A Chef Bot automated soda dispensing machine"
-              width={1672}
-              height={941}
+              src="/images/chefbot-machine-wrap-studio.png"
+              alt="A premium white and navy Chef Code automated beverage machine with Chef Bot branding"
+              width={1536}
+              height={1024}
               sizes="(max-width: 1280px) 100vw, 1240px"
             />
           </div>

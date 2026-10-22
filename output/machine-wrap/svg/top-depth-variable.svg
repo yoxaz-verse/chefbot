@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3200 1200" data-panel="top-depth-variable" data-status="PROVISIONAL - VERIFY ON MACHINE BEFORE PRINTING">
+  <title>The Chef Code Machine Wrap - Measured Proof - top-depth-variable</title>
+  <desc>Editable measured-proof artwork. Verify all dimensions and cutouts on the physical machine before printing.</desc>
+  <g id="background"><rect width="3200" height="1200" fill="#FFFFFF"/></g>
+  <g id="brand-architecture">
+      <path d="M 0 912 C 640 804, 1344 1020, 2016 912 S 2816 792, 3200 864 L 3200 1200 L 0 1200 Z" fill="#071A33"/>
+      <path d="M 0 864 C 640 744, 1344 948, 2016 840 S 2816 720, 3200 792" fill="none" stroke="#59B8FF" stroke-width="38"/>
+      <path d="M 0 804 C 640 684, 1344 888, 2016 780 S 2816 660, 3200 732" fill="none" stroke="#DCEEFF" stroke-width="70"/>
+      <path d="M 0 732 C 640 612, 1344 816, 2016 708 S 2816 588, 3200 660" fill="none" stroke="#FF6B22" stroke-width="19"/>
+    <circle cx="320" cy="144" r="112" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="576" cy="240" r="58" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="2720" cy="168" r="77" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="2496" cy="828" r="48" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/></g>
+  <g id="character"></g>
+  <g id="typography">
+      <text x="1600" y="240" text-anchor="middle" fill="#071A33" font-family="Sora, Arial, sans-serif" font-size="368" font-weight="700">The Chef Code</text>
+      <path d="M 1536 270 Q 1600 282 1664 270" fill="none" stroke="#FF6B22" stroke-width="10" stroke-linecap="round"/>
+      <text x="1600" y="294" text-anchor="middle" fill="#071A33" font-family="Inter, Arial, sans-serif" font-size="89" font-weight="600" letter-spacing="2">One Chef. Infinite Worlds. Endless Creations.</text>
+    </g>
+  <g id="safe-area" data-print="false" style="display:none"><rect x="42" y="42" width="3116" height="1116" fill="none" stroke="#FF6B22" stroke-width="10" stroke-dasharray="30 20"/></g>
+  
+  <g id="bleed" data-print="false" style="display:none"><rect x="2" y="2" width="3196" height="1196" fill="none" stroke="#59B8FF" stroke-width="4"/></g>
+</svg>

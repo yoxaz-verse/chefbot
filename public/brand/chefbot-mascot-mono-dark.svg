@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Chef Bot mascot, dark monochrome">
+  <path fill="#071A33" d="M132 190c-31-10-52-37-52-70 0-42 34-76 76-76 18 0 34 6 47 16C216 25 248 4 284 4c44 0 81 31 90 72 9-4 19-6 30-6 40 0 72 32 72 72 0 28-16 53-40 65v21h8v128c0 57-47 104-104 104H172c-57 0-104-47-104-104V314c0-57 47-104 104-104h244v-11c0-17-13-30-30-30H126c-17 0-30 13-30 30v29h-1l37-38Z"/>
+  <rect x="105" y="249" width="302" height="166" rx="78" fill="#F7F8FA"/>
+  <ellipse cx="191" cy="333" rx="54" ry="65" fill="#071A33"/>
+  <ellipse cx="321" cy="333" rx="54" ry="65" fill="#071A33"/>
+  <ellipse cx="207" cy="311" rx="15" ry="20" fill="#F7F8FA"/>
+  <ellipse cx="337" cy="311" rx="15" ry="20" fill="#F7F8FA"/>
+</svg>

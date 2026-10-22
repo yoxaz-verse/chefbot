@@ -11,7 +11,7 @@
 }
 .navInner { padding: 0 14px 0 18px; }
 .brand { display: flex; align-items: center; gap: 8px; }
-.brandMark { width: 30px; height: 30px; display: grid; place-items: center; color: var(--ink) !important; border-radius: 9px; background: white; font: 750 .84rem var(--font-sora), sans-serif; }
+.brandMark { width: 30px; height: 30px; display: block; border-radius: 9px; background: white; object-fit: contain; padding: 2px; }
 .brandName { color: white !important; }
 .brandCharacter { color: #8c929c !important; }
 .navLinks { position: absolute; left: 50%; translate: -50% 0; height: 100%; }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { DEMO_HREF } from "@/data/content";
 
 const links = [
@@ -32,7 +33,7 @@ export function Navigation() {
     <header className="nav" aria-label="Primary navigation">
       <nav className="navInner">
         <a className="brand" href="#top" onClick={() => setOpen(false)}>
-          <span className="brandMark" aria-hidden="true">C</span>
+          <Image className="brandMark" src="/brand/chefbot-mascot-mark.svg" alt="" width={30} height={30} priority />
           <span className="brandName">The Chef Code</span>
           <span className="brandCharacter">/ Chef Bot</span>
         </a>

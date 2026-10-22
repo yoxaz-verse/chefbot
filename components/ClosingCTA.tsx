@@ -16,7 +16,11 @@ export function ClosingCTA() {
         </a>
         <footer>
           <span>© 2026 The Chef Code</span>
-          <span>Cook · Create · Explore</span>
+          <span className="footerLinks">
+            <a href="/brand/">Brand Guidelines</a>
+            <span aria-hidden="true">·</span>
+            <span>Cook · Create · Explore</span>
+          </span>
         </footer>
       </Reveal>
     </section>

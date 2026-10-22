@@ -1,6 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import "./globals.css";
+
+const inter = localFont({
+  src: "./fonts/Inter-Variable.ttf",
+  variable: "--font-inter",
+  display: "swap",
+  weight: "100 900",
+});
+
+const sora = localFont({
+  src: "./fonts/Sora-Variable.ttf",
+  variable: "--font-sora",
+  display: "swap",
+  weight: "100 800",
+});
 
 export const metadata: Metadata = {
   title: "The Chef Code — One Chef. Infinite Worlds.",
@@ -18,7 +33,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.variable} ${sora.variable}`}>{children}</body>
     </html>
   );
 }

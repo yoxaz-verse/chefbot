@@ -28,7 +28,7 @@ export const DEMO_HREF =
   "mailto:popapopzfoods@gmail.com?subject=Book%20a%20Chef%20Bot%20demo";
 
 export const DEMO_HREF_WITH_BODY =
-  "mailto:popapopzfoods@gmail.com?subject=Book%20a%20Chef%20Bot%20demo&body=Hello%20The%20Chef%20Code%20team%2C%0A%0AI%27d%20like%20to%20book%20a%20demo.";
+  "mailto:popapopzfoods@gmail.com?subject=Book%20a%20Chef%20Bot%20demo&body=Hello%20Chef%20Bot%20team%2C%0A%0AI%27d%20like%20to%20book%20a%20demo.";
 
 export const universes: readonly Universe[] = [
   {

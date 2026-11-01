@@ -11,23 +11,23 @@ export function CreationShowcase() {
             <h2>Discovery, made real.</h2>
           </div>
           <p>
-            The Chef Code turns imagination into automated food and beverage
+            Chef Bot turns imagination into automated food and beverage
             experiences — from flavoured soda and popping boba to thick shakes,
             protein shakes and ideas still waiting in another universe.
           </p>
         </Reveal>
         <Reveal className="creationCard">
           <div className="machineFrame">
-            <div className="machineMeta"><span>Chef Code / Creation 01</span><span>Automated beverage system</span></div>
+            <div className="machineMeta"><span>Chef Bot / Creation 01</span><span>Automated beverage system</span></div>
             <Image
               src="/images/chefbot-machine-wrap-studio.png"
-              alt="A premium white and navy Chef Code automated beverage machine with Chef Bot branding"
+              alt="A premium white and navy Chef Bot automated beverage machine"
               width={1536}
               height={1024}
               sizes="(max-width: 1280px) 100vw, 1240px"
             />
           </div>
-          <div className="productRail" aria-label="Chef Code product families">
+          <div className="productRail" aria-label="Chef Bot product families">
             {[
               ["01", "Flavoured soda", "Fizz Nebula"],
               ["02", "Popping boba", "Pearl Planet"],

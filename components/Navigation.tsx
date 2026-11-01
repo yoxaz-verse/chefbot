@@ -42,9 +42,8 @@ export function Navigation() {
     <header className="nav" aria-label="Primary navigation">
       <nav className="navInner">
         <a className="brand" href="#top" onClick={() => setOpen(false)}>
-          <Image className="brandMark" src="/brand/chefbot-head-3d.png" alt="" width={1200} height={1096} priority />
-          <span className="brandName">The Chef Code</span>
-          <span className="brandCharacter">/ Chef Bot</span>
+          <Image className="brandMark" src="/brand/chefbot-head-3d.png" alt="Chef Bot logo" width={1200} height={1096} priority />
+          <span className="brandName">Chef Bot</span>
         </a>
         <div className={`navLinks ${open ? "isOpen" : ""}`} id="primary-links">
           {links.map((link) => (

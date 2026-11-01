@@ -19,9 +19,14 @@ const sora = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Chef Code — One Chef. Infinite Worlds.",
+  title: "Chef Bot — One Chef. Infinite Worlds.",
   description:
-    "Meet Chef Bot, the curious robotic chef exploring infinite worlds to inspire the automated food and beverage creations of The Chef Code.",
+    "Meet Chef Bot, the curious robotic chef exploring infinite worlds to inspire the automated food and beverage creations of Chef Bot.",
+  openGraph: {
+    title: "Chef Bot — One Chef. Infinite Worlds.",
+    description:
+      "Meet Chef Bot, the curious robotic chef exploring infinite worlds to inspire the automated food and beverage creations of Chef Bot.",
+  },
   icons: { icon: "/favicon.svg" },
 };
 

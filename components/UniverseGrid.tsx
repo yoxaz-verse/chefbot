@@ -61,7 +61,7 @@ export function UniverseGrid() {
           <div className="universeStage universeStageDiscovered" role="tabpanel" id={`universe-panel-${activeIndex}`} aria-labelledby={`universe-tab-${activeIndex}`} tabIndex={0}>
             <div className="fizzDiscoveryVisual" id="creations">
               <div className="fizzOrbit" aria-hidden="true"><i /><i /><i /></div>
-              <Image className="fizzMachine" src="/images/chefbot-machine-cutout.png" alt="The discovered Chef Code flavoured soda machine in the Fizz Nebula" width={1309} height={1202} sizes="(max-width: 760px) 82vw, 46vw" />
+              <Image className="fizzMachine" src="/images/chefbot-machine-cutout.png" alt="The discovered Chef Bot flavoured soda machine in the Fizz Nebula" width={1309} height={1202} sizes="(max-width: 760px) 82vw, 46vw" />
               <Image className="fizzBot" src="/images/chefbot.png" alt="Chef Bot exploring beside the newly discovered machine" width={1254} height={1254} sizes="(max-width: 760px) 25vw, 13vw" />
               <span className="discoveryBadge">Discovery 01 · Complete</span>
             </div>

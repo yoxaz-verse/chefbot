@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate The Chef Code brand book from the canonical JSON tokens."""
+"""Generate Chef Bot brand book from the canonical JSON tokens."""
 
 from __future__ import annotations
 
@@ -105,7 +105,7 @@ def round_box(c: Canvas, x: float, y: float, w: float, h: float, radius: float =
 
 def footer(c: Canvas, page: int, dark: bool = False) -> None:
     color = Color(1, 1, 1, alpha=.45) if dark else Color(7/255, 8/255, 10/255, alpha=.42)
-    text(c, "THE CHEF CODE  /  BRAND SYSTEM V1.0", 48, 24, 7.5, "Inter", color)
+    text(c, "CHEF BOT  /  BRAND SYSTEM V1.0", 48, 24, 7.5, "Inter", color)
     c.setFont("Inter", 7.5); c.setFillColor(color); c.drawRightString(912, 24, f"{page:02d}")
 
 
@@ -120,9 +120,9 @@ def finish(c: Canvas) -> None:
 def generate() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True); PUBLIC.parent.mkdir(parents=True, exist_ok=True)
     c = Canvas(str(OUT), pagesize=(W, H), pageCompression=1)
-    c.setTitle("The Chef Code Brand Book")
-    c.setAuthor("The Chef Code")
-    c.setSubject("Brand guidelines for The Chef Code and Chef Bot")
+    c.setTitle("Chef Bot Brand Book")
+    c.setAuthor("Chef Bot")
+    c.setSubject("Brand guidelines for Chef Bot")
     hero = ROOT / "public/images/chefbot.png"
     spotlight = ROOT / "public/images/chefbot-spotlight.png"
     machine = ROOT / "public/images/chefbot-machine.png"
@@ -132,20 +132,20 @@ def generate() -> None:
     c.setFillColor(Color(89/255,184/255,1,alpha=.10)); c.circle(765, 282, 205, fill=1, stroke=0)
     label(c, "Brand guidelines / Version 1.0", 54, 470)
     title(c, "One Chef.\nInfinite Worlds.\nEndless Creations.", 54, 400, 55, white)
-    wrapped(c, "The visual, verbal and interface system for The Chef Code and Chef Bot.", 57, 202, 390, 13, 20, "Inter", HexColor("#AEB5C0"))
+    wrapped(c, "The visual, verbal and interface system for Chef Bot.", 57, 202, 390, 13, 20, "Inter", HexColor("#AEB5C0"))
     image_contain(c, hero, 535, 40, 370, 470)
     finish(c)
 
     # 02 Foundation
     new_page(c, 2)
     label(c, "01 / Foundation", 48, 482); title(c, "A story-driven\ntechnology brand.", 48, 432, 45)
-    wrapped(c, "The Chef Code transforms discoveries from Chef Bot's culinary universe into automated food and beverage experiences in the real world.", 48, 310, 360, 13, 19)
+    wrapped(c, "Chef Bot transforms discoveries from its culinary universe into automated food and beverage experiences in the real world.", 48, 310, 360, 13, 19)
     round_box(c, 468, 284, 444, 174, 26, NAVY, NAVY)
     label(c, "Core idea", 496, 424, HexColor("#91A5BB"))
     title(c, "One Chef. Infinite Worlds.\nEndless Creations.", 496, 368, 29, white)
     round_box(c, 468, 70, 444, 188, 26)
     label(c, "Relationship", 496, 222)
-    wrapped(c, "The Chef Code is the company and system. Chef Bot is its recognizable central protagonist: curious, friendly, inventive and slightly adventurous.", 496, 182, 370, 13, 20)
+    wrapped(c, "Chef Bot is the company and system: curious, friendly, inventive and slightly adventurous.", 496, 182, 370, 13, 20)
     finish(c)
 
     # 03 Story system
@@ -252,7 +252,7 @@ def generate() -> None:
     new_page(c, 11, NAVY, True)
     label(c, "10 / Interface and motion", 48, 482); title(c, "Clear, warm and\nquietly futuristic.", 48, 430, 44, white)
     round_box(c, 48, 80, 518, 224, 26, white, white)
-    text(c, "The Chef Code", 74, 268, 11, "Sora"); text(c, "STORY   UNIVERSES   CREATIONS", 240, 268, 7.5, "Inter", MUTED)
+    text(c, "Chef Bot", 74, 268, 11, "Sora"); text(c, "STORY   UNIVERSES   CREATIONS", 240, 268, 7.5, "Inter", MUTED)
     text(c, "The next universe", 74, 214, 8, "Inter", ORANGE); title(c, "Discovery, made real.", 74, 170, 32)
     c.setFillColor(ORANGE); c.roundRect(74, 104, 130, 34, 17, fill=1, stroke=0); text(c, "Explore the universe", 90, 116, 8, "Inter", white)
     motion = [("Reveal", "800 ms", "Gentle rise with restrained easing."), ("Hover", "250 ms", "Subtle elevation, never spectacle."), ("Reduced motion", "Required", "Remove motion; preserve meaning.")]

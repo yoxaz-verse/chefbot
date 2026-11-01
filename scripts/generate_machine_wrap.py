@@ -110,7 +110,7 @@ def write_svgs() -> None:
     }
     for name, content in panels.items():
         (SVG_DIR / name).write_text(content)
-    readme = """# The Chef Code Machine Wrap - Measured Proof\n\nPROVISIONAL: VERIFY ON MACHINE BEFORE PRINTING.\n\n- Front and rear use the scan's provisional 32 x 75 inch overall size.\n- Side and top SVGs use normalized viewBoxes because physical depth is unknown. Set their horizontal dimension to the measured machine depth before production.\n- Layer IDs: background, brand-architecture, character, typography, safe-area, provisional-cutouts, bleed.\n- Hidden annotation layers use `data-print=false`; do not enable them in production artwork.\n- Linked Chef Bot artwork is intentional and located at `public/images/chefbot.png`. Package it with the SVG masters.\n- Convert Sora and Inter text to outlines in the printer's preflight workflow after copy approval.\n- Add printer-specific bleed only after physical measurement and substrate confirmation.\n"""
+    readme = """# Chef Bot Machine Wrap - Measured Proof\n\nPROVISIONAL: VERIFY ON MACHINE BEFORE PRINTING.\n\n- Front and rear use the scan's provisional 32 x 75 inch overall size.\n- Side and top SVGs use normalized viewBoxes because physical depth is unknown. Set their horizontal dimension to the measured machine depth before production.\n- Layer IDs: background, brand-architecture, character, typography, safe-area, provisional-cutouts, bleed.\n- Hidden annotation layers use `data-print=false`; do not enable them in production artwork.\n- Linked Chef Bot artwork is intentional and located at `public/images/chefbot.png`. Package it with the SVG masters.\n- Convert Sora and Inter text to outlines in the printer's preflight workflow after copy approval.\n- Add printer-specific bleed only after physical measurement and substrate confirmation.\n"""
     (OUT / "README.md").write_text(readme)
 
 
@@ -144,7 +144,7 @@ def wrapped(c: Canvas, value: str, x: float, y: float, width: float, size=11, le
 def page_base(c: Canvas, number: int, dark=False) -> None:
     c.setFillColor(NAVY if dark else PAPER); c.rect(0,0,W,H,fill=1,stroke=0)
     color=Color(1,1,1,.45) if dark else Color(0,0,0,.38)
-    ptext(c,"THE CHEF CODE / MACHINE WRAP MEASURED PROOF",42,22,7,"Inter",color)
+    ptext(c,"CHEF BOT / MACHINE WRAP MEASURED PROOF",42,22,7,"Inter",color)
     c.setFillColor(color); c.setFont("Inter",7); c.drawRightString(W-42,22,f"{number:02d}")
 
 
@@ -161,8 +161,8 @@ def warning(c: Canvas, x: float, y: float, w: float) -> None:
 def generate_pdf() -> None:
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     c=Canvas(str(PDF_PATH),pagesize=(W,H),pageCompression=1)
-    c.setTitle("The Chef Code Machine Wrap - Measured Proof")
-    c.setAuthor("The Chef Code")
+    c.setTitle("Chef Bot Machine Wrap - Measured Proof")
+    c.setAuthor("Chef Bot")
 
     page_base(c,1,True); heading(c,"Measured proof / v1.0","Premium by design.\nMeasured before print.",42,478,True)
     wrapped(c,"A classic white and navy full-exterior wrap concept for the Chef Bot automated beverage machine.",46,335,360,13,20,HexColor("#AEBED1"))

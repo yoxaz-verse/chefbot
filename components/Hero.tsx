@@ -7,7 +7,7 @@ export function Hero() {
       <div className="heroAtmosphere" aria-hidden="true"><span /><span /><span /></div>
       <div className="heroGrid">
         <div className="heroContent">
-          <p className="eyebrow">The Chef Code Universe</p>
+          <p className="eyebrow">The Chef Bot Universe</p>
           <h1>
             <span>One Chef.</span>
             <em>Infinite Worlds.</em>
@@ -25,7 +25,7 @@ export function Hero() {
               Book a demo
             </a>
           </div>
-          <div className="heroSystems" aria-label="Chef Code creations">
+          <div className="heroSystems" aria-label="Chef Bot creations">
             <span>Flavoured soda</span><i />
             <span>Popping boba</span><i />
             <span>Shake systems</span>

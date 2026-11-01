@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3200 1200" data-panel="top-depth-variable" data-status="PROVISIONAL - VERIFY ON MACHINE BEFORE PRINTING">
-  <title>The Chef Code Machine Wrap - Measured Proof - top-depth-variable</title>
+  <title>Chef Bot Machine Wrap - Measured Proof - top-depth-variable</title>
   <desc>Editable measured-proof artwork. Verify all dimensions and cutouts on the physical machine before printing.</desc>
   <g id="background"><rect width="3200" height="1200" fill="#FFFFFF"/></g>
   <g id="brand-architecture">
@@ -11,7 +11,7 @@
     <circle cx="320" cy="144" r="112" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="576" cy="240" r="58" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="2720" cy="168" r="77" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/><circle cx="2496" cy="828" r="48" fill="none" stroke="#59B8FF" stroke-width="8" opacity=".9"/></g>
   <g id="character"></g>
   <g id="typography">
-      <text x="1600" y="240" text-anchor="middle" fill="#071A33" font-family="Sora, Arial, sans-serif" font-size="368" font-weight="700">The Chef Code</text>
+      <text x="1600" y="240" text-anchor="middle" fill="#071A33" font-family="Sora, Arial, sans-serif" font-size="368" font-weight="700">Chef Bot</text>
       <path d="M 1536 270 Q 1600 282 1664 270" fill="none" stroke="#FF6B22" stroke-width="10" stroke-linecap="round"/>
       <text x="1600" y="294" text-anchor="middle" fill="#071A33" font-family="Inter, Arial, sans-serif" font-size="89" font-weight="600" letter-spacing="2">One Chef. Infinite Worlds. Endless Creations.</text>
     </g>

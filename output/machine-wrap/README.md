@@ -1,4 +1,4 @@
-# The Chef Code Machine Wrap - Measured Proof
+# Chef Bot Machine Wrap - Measured Proof
 
 PROVISIONAL: VERIFY ON MACHINE BEFORE PRINTING.
 

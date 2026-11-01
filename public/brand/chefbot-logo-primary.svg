@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 320" role="img" aria-labelledby="title desc">
-  <title id="title">The Chef Code with Chef Bot mascot</title>
-  <desc id="desc">Chef Bot's robot head beside The Chef Code wordmark and One Chef, Infinite Worlds tagline.</desc>
+  <title id="title">Chef Bot logo</title>
+  <desc id="desc">Chef Bot robot head beside Chef Bot wordmark and One Chef, Infinite Worlds tagline.</desc>
   <g transform="translate(18 5) scale(.6)">
     <path d="M104 205C69 190 49 160 55 127c7-40 45-66 85-58 15 3 29 10 39 21 13-42 52-71 97-67 43 4 78 36 85 77 13-12 31-18 50-15 39 6 65 43 58 82-4 25-20 45-42 56l-323-18Z" fill="#f7f8fa" stroke="#d3dbe6" stroke-width="7"/>
     <path d="M121 190h270c18 0 32 14 32 32v37H89v-37c0-18 14-32 32-32Z" fill="#fff" stroke="#d3dbe6" stroke-width="7"/>
@@ -12,7 +12,7 @@
     <path d="M230 438c15 13 37 13 52 0" fill="none" stroke="#172235" stroke-width="9" stroke-linecap="round"/>
   </g>
   <g fill="#071A33" font-family="Sora, Arial, sans-serif">
-    <text x="350" y="148" font-size="79" font-weight="750" letter-spacing="-4">The Chef Code</text>
+    <text x="350" y="148" font-size="79" font-weight="750" letter-spacing="-4">Chef Bot</text>
     <text x="356" y="205" font-size="24" font-weight="600" letter-spacing="7">ONE CHEF. INFINITE WORLDS.</text>
   </g>
   <path d="M356 238h585" stroke="#D5DCE6" stroke-width="3"/>

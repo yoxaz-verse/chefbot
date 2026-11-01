@@ -4,9 +4,9 @@ import Link from "next/link";
 import { brand } from "@/data/brand";
 
 export const metadata: Metadata = {
-  title: "Brand Guidelines — The Chef Code",
+  title: "Brand Guidelines — Chef Bot",
   description:
-    "The visual and verbal identity system for The Chef Code and Chef Bot.",
+    "The visual and verbal identity system for Chef Bot.",
 };
 
 const tokenSnippet = `:root {
@@ -24,12 +24,12 @@ export default function BrandPage() {
     <main className="brandBook">
       <nav className="brandBookNav" aria-label="Brand book navigation">
         <Link className="brand" href="/">
-          The Chef Code <span>/ Brand Book</span>
+          Chef Bot <span>/ Brand Book</span>
         </Link>
         <div>
           <a href="#foundation">Foundation</a>
           <a href="#system">System</a>
-          <a href="/downloads/the-chef-code-brand-book.pdf" download>
+          <a href="/downloads/chef-bot-brand-book.pdf" download>
             Download PDF
           </a>
         </div>
@@ -40,11 +40,11 @@ export default function BrandPage() {
           <p className="brandLabel">Brand guidelines · Version 1.0</p>
           <h1>One Chef.<br /><em>Infinite Worlds.</em></h1>
           <p>
-            A practical system for expressing The Chef Code with clarity,
+            A practical system for expressing Chef Bot with clarity,
             imagination and consistency - from product interfaces to stories
             set in entirely new universes.
           </p>
-          <a className="button brandDownload" href="/downloads/the-chef-code-brand-book.pdf" download>
+          <a className="button brandDownload" href="/downloads/chef-bot-brand-book.pdf" download>
             Download the brand book <span className="arrow">↓</span>
           </a>
         </div>
@@ -65,7 +65,7 @@ export default function BrandPage() {
           <p className="brandLabel">01 · Foundation</p>
           <h2>A story-driven technology brand.</h2>
           <p>
-            The Chef Code transforms discoveries from Chef Bot&apos;s fictional
+            Chef Bot transforms discoveries from its fictional
             culinary universe into automated food and beverage experiences in
             the real world.
           </p>
@@ -192,7 +192,7 @@ export default function BrandPage() {
           <p>Interfaces should feel engineered without becoming cold. Use generous space, decisive hierarchy and one primary action at a time.</p>
         </div>
         <div className="uiDemo">
-          <div className="uiDemoNav"><strong>The Chef Code</strong><span>Story&nbsp;&nbsp; Universes&nbsp;&nbsp; Creations</span><button type="button">Book a demo</button></div>
+          <div className="uiDemoNav"><strong>Chef Bot</strong><span>Story&nbsp;&nbsp; Universes&nbsp;&nbsp; Creations</span><button type="button">Book a demo</button></div>
           <div className="uiDemoBody"><p className="brandLabel">The next universe</p><h3>Discovery,<br />made real.</h3><div><button type="button">Explore the universe</button><button type="button" className="ghostButton">Learn more</button></div></div>
         </div>
         <div className="motionGrid">
@@ -223,7 +223,7 @@ export default function BrandPage() {
         </div>
         <pre><code>{tokenSnippet}</code></pre>
         <div className="brandFinal">
-          <p>The Chef Code · Brand system v1.0</p>
+          <p>Chef Bot · Brand system v1.0</p>
           <Link href="/">Return to the universe <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
